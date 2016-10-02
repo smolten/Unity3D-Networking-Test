@@ -1,0 +1,35 @@
+Important terminology:
+	Server:	The authoritative 'core' of the network, accessed by Clients
+	Client:	Software which connects to the Server
+	Host:	Software which is running both as a Client and a Host
+	LocalPlayer:	A player GameObject owned by "this" client
+	
+Important MonoBehaviours ( From Unity3D 5.4 Scripting API docs ):
+	
+	NetworkManager
+		Determines if the game will run as Server, Client, or Host. Handles matchmaking, network 
+		spawning of objects, and the game state.
+		
+		Any objects which will be spawned (players, bullet prefabs, etc) must be registered either
+		by being placed into the Network Manager's UI or through code. They also MUST have a 
+		NetworkIdentity attached.
+	
+	NetworkManagerHUD
+		Provides a simple GUI for NetworkManager.
+	
+	NetworkIdentity
+		"Used to synchronize imformation in the object with the network."
+	
+		Allows servers and clients to identify objects. For complex heirarchies of subcomponents, 
+		only attach ONE NetworkIdentity to the ROOT of the heirarchy. Instances of objects which
+		have a NetworkIdentity must be created by the server.
+	
+	NetworkBehaviour
+		"Base class which should be inherited by scripts which contain networking functionality."
+		Requires a NetworkIdentity to be attached to the same object. Multiple NetworkBehaviours
+		can be attached to an object, but they must be on the ROOT of the hierarchy.
+
+
+Important Reading:
+	Commands (called from client, run on server) and ClientRpc Calls (called from server, run on clients): 
+		https://docs.unity3d.com/Manual/UNetActions.html
