@@ -1,4 +1,4 @@
-﻿//https://unity3d.com/learn/tutorials/topics/multiplayer-networking/player-health-single-player?playlist=29690
+﻿//https://unity3d.com/learn/tutorials/topics/multiplayer-networking/networking-player-health?playlist=29690
 
 using UnityEngine;
 using UnityEngine.Networking;
