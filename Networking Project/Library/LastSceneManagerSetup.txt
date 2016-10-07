@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/Scott/Documents/Unity3D Projects/SpringSlime/Assets/Scenes/Dev Scene.unity
+- path: Assets/Scenes/Main.unity
   isLoaded: 1
   isActive: 1
